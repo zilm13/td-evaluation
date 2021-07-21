@@ -1,0 +1,9 @@
+# IDEA files
+.idea/
+
+# Python
+venv/
+__pycache__/
+
+#d Data
+*.csv
