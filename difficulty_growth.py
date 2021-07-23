@@ -39,7 +39,7 @@ def main():
         difficulty = calc_difficulty(difficulty, block)
         total_difficulty += difficulty
         if total_difficulty > transition_total_difficulty:
-            print("Block #{} difficulty {}".format(block, difficulty))
+            print("Transition block #{} difficulty {}".format(block, difficulty))
             break
 
 
