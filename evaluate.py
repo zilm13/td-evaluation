@@ -43,4 +43,4 @@ def main():
                     print("Calculated {} blocks".format(row[0]))
 
 
-main()
+# main()
