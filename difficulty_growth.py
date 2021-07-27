@@ -1,5 +1,5 @@
 # from evaluate_target import compute_target_delay
-from evaluate import compute_transition_total_difficulty, PowBlock
+from util import compute_transition_total_difficulty, PowBlock
 
 TOTAL_DIFFICULTY =  27886712656263580414632
 MAX_DIFFICULTY = 6856186631660169

@@ -1,7 +1,6 @@
 import csv
 from sortedcontainers import SortedList
-from config import config
-
+from util import compute_target_delay
 
 INPUT_DATA_PATH = "./result.csv"
 OUTPUT_DATA_PATH = "./result_target.csv"
@@ -38,15 +37,6 @@ class WriteRecord(object):
 
     def __lt__(self, other):
         return self._cmp_key() < other._cmp_key()
-
-
-def compute_target_delay() -> int:
-    seconds_per_voting_period = config.EPOCHS_PER_ETH1_VOTING_PERIOD * config.SLOTS_PER_EPOCH \
-                                * config.SECONDS_PER_SLOT
-    pow_blocks_per_voting_period = seconds_per_voting_period // config.SECONDS_PER_ETH1_BLOCK
-    pow_blocks_to_merge = config.TARGET_SECONDS_TO_MERGE // config.SECONDS_PER_ETH1_BLOCK
-    pow_blocks_after_anchor_block = config.ETH1_FOLLOW_DISTANCE + pow_blocks_per_voting_period + pow_blocks_to_merge
-    return int(pow_blocks_after_anchor_block)
 
 
 def main():
