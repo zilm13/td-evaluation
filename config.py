@@ -10,6 +10,7 @@ class Configuration(NamedTuple):
     ETH1_FOLLOW_DISTANCE: uint64
     MIN_ANCHOR_POW_BLOCK_DIFFICULTY: uint64
     TARGET_SECONDS_TO_MERGE: uint64
+    MIN_GENESIS_TIME: uint64
 
 
 # Mainnet numbers
@@ -28,4 +29,6 @@ config = Configuration(
     MIN_ANCHOR_POW_BLOCK_DIFFICULTY=uint64(4294967296),
     # 7 * 60*60*24 = 7 days
     TARGET_SECONDS_TO_MERGE=uint64(604800),
+    # Dec 1, 2020, 12pm UTC
+    MIN_GENESIS_TIME = uint64(1606824000),
 )
